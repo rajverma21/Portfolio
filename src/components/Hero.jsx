@@ -1,6 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import profilePic from '../assets/pp.png'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -41,9 +42,13 @@ const Hero = () => {
             currently expanding my expertise in the MERN stack.
           </div>
           <div className='flex justify-center items-center md:block'>
-            <button className='w-1/3 py-2 mt-4 rounded-xl bg-[#51cffd] text-[#212121] font-body font-semibold transition duration-300 hover:bg-amber-600 hover:text-amber-50 hover:shadow-2xl'>
+            <a
+              href='https://drive.google.com/file/d/1jMfXv-6M2PPKvR5ljmsAfu-_QO-GHWs3/view'
+              target='_blank'
+              className='block w-1/3 py-2 mt-4 rounded-xl bg-[#51cffd] text-[#212121] font-body font-semibold transition duration-300 hover:bg-amber-600 hover:text-amber-50 hover:shadow-2xl text-center'
+            >
               Resume
-            </button>
+            </a>
           </div>
         </div>
         <div className='rounded-full h-64 lg:h-auto overflow-hidden shadow-white shadow-xl scale-75 hover:scale-90 duration-200 transition-all'>

@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react'
 import project1 from '../assets/project1.png'
+import project2 from '../assets/project2.png'
+import project3 from '../assets/project3.png'
+import project4 from '../assets/project4.png'
+import project5 from '../assets/project5.png'
+import project6 from '../assets/project6.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -14,50 +19,50 @@ const Projects = () => {
     {
       id: 1,
       src: project1,
-      title: 'HTML',
+      title: 'Expense <Tracker/>',
       style: 'shadow-sky-600 shadow-lg',
-      demoLink: 'https://fitness-decoder.vercel.app/',
-      sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
+      demoLink: 'https://mernexpensetracker.vercel.app/',
+      sourceCode: 'https://github.com/rajverma21/Expense-Tracker'
     },
     {
       id: 2,
-      src: project1,
-      title: 'CSS',
+      src: project2,
+      title: 'FitnessDecoder',
       style: 'shadow-sky-600 shadow-lg',
       demoLink: 'https://fitness-decoder.vercel.app/',
       sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
     },
     {
       id: 3,
-      src: project1,
-      title: 'JavaScript',
+      src: project3,
+      title: 'CryptoFlow',
       style: 'shadow-sky-600 shadow-lg',
-      demoLink: 'https://fitness-decoder.vercel.app/',
-      sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
+      demoLink: 'https://crypto-flow.vercel.app/',
+      sourceCode: 'https://github.com/rajverma21/CryptoFlow'
     },
     {
       id: 4,
-      src: project1,
-      title: 'React JS',
+      src: project4,
+      title: 'ShopFlare',
       style: 'shadow-sky-900 shadow-lg',
-      demoLink: 'https://fitness-decoder.vercel.app/',
-      sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
+      demoLink: 'https://shop-flare-xi.vercel.app/',
+      sourceCode: 'https://github.com/rajverma21/ShopFlare'
     },
     {
       id: 5,
-      src: project1,
-      title: 'Tailwind CSS',
+      src: project5,
+      title: 'SkySnap',
       style: 'shadow-sky-900 shadow-lg',
-      demoLink: 'https://fitness-decoder.vercel.app/',
-      sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
+      demoLink: 'https://sky-snap-henna.vercel.app/',
+      sourceCode: 'https://github.com/rajverma21/SkySnap'
     },
     {
       id: 6,
-      src: project1,
-      title: 'Firebase',
+      src: project6,
+      title: 'To-Do',
       style: 'shadow-sky-900 shadow-lg',
-      demoLink: 'https://fitness-decoder.vercel.app/',
-      sourceCode: 'https://github.com/rajverma21/FitnessDecoder'
+      demoLink: 'https://to-do-react-app-celebal.vercel.app/',
+      sourceCode: 'https://github.com/rajverma21/React-To-Do'
     }
   ]
 
@@ -92,23 +97,22 @@ const Projects = () => {
                 key={id}
                 data-aos='fade-down'
                 data-aos-offset='200'
-                className={`flex flex-col gap-3 justify-center items-center ${style} px-6 rounded-lg p-4 hover:scale-110 hover:text-white duration-300`}
+                className={`flex flex-col gap-3 justify-center items-center ${style} px-6 rounded-lg p-4 transform transition-transform duration-300 hover:scale-105`}
               >
-                <img
-                  src={src}
-                  alt={title}
-                  className='h-28 rounded-md cursor-pointer'
-                  onClick={() => {
-                    alert('Hello, This is my Project')
-                  }}
-                />
+                <img src={src} alt={title} className='h-28 rounded-md' />
                 <p>{title}</p>
                 <div className='flex items-center border-cyan-400 border-2 rounded-md py-1 w-full'>
-                  <a href={demoLink} className='text-center w-full'>
+                  <a
+                    href={demoLink}
+                    className='text-center w-full hover:text-white'
+                  >
                     View
                   </a>
                   <div className='w-[1px] h-full bg-slate-50'></div>
-                  <a href={sourceCode} className='text-center w-full'>
+                  <a
+                    href={sourceCode}
+                    className='text-center w-full hover:text-white'
+                  >
                     Code
                   </a>
                 </div>
